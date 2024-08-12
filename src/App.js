@@ -10,10 +10,11 @@ import FactorOnePage from "./pages/FactorOnePage";
 import FactorTwoPage from "./pages/FactorTwoPage";
 
 const publishableKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
+const frontendApi = process.env.REACT_APP_CLERK_FRONTEND_API
 
 function App() {
   return (
-    <ClerkProvider publishableKey={publishableKey}>
+    <ClerkProvider frontendApi={frontendApi} publishableKey={publishableKey}>
       <Router>
         <Navbar />
         <Routes>
